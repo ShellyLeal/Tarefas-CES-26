@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html> 
+<head>
+ <script> 
+// run this function when the document is loaded 
+	window.onload = function() { 
+
+// create a couple of elements in an otherwise empty HTML page 
+	var heading = document.createElement("h1");
+	var heading_text = document.createTextNode("Big Head!"); 
+	heading.appendChild(heading_text); 
+	document.body.appendChild(heading); 
+	var heading2 = document.createElement("h1");
+	var heading_text2 = document.createTextNode("Another big Head!"); 
+	heading2.appendChild(heading_text2); 
+	document.body.appendChild(heading2); 
+	}
+ </script> 
+ 
+</head> 
+<h1 onclick="this.innerHTML = 'It changed! :O'">Click on this text!</h1>
+<body> 
+
+<div id="div1">
+<p id="p1">This is a text.</p>
+<p id="p2">This is another text.</p>
+</div>
+<script>
+var parent = document.getElementById("div1");
+var child = document.getElementById("p1");
+parent.removeChild(child);
+</script>
+
+
+<div id="div2">
+<p id="p3">This is a paragraph.</p>
+<p id="p4">This is another paragraph.</p>
+</div>
+<script>
+var para = document.createElement("p");
+var node = document.createTextNode("This is new.");
+para.appendChild(node);
+
+var parent = document.getElementById("div2");
+var child = document.getElementById("p3");
+parent.replaceChild(para, child);
+</script>
+
+</body> 
+
+</html> 
